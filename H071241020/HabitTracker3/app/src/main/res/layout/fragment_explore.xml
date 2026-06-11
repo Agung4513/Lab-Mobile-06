@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/windowBackground">
+
+    <!-- Loading State -->
+    <ProgressBar
+        android:id="@+id/progress_loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Main Content Layout (Conditional Visibility) -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_explore_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Title Header -->
+            <TextView
+                android:id="@+id/text_explore_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inspirasi &amp; Rekomendasi"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/text_explore_subtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kutipan motivasi dan tips harian dari server"
+                android:textColor="@color/neutral_gray"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@id/text_explore_title"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <!-- Inspiration Quote Card (Bento Design) -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_quote"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1.5dp"
+                app:strokeColor="@color/card_stroke_light"
+                app:cardBackgroundColor="?attr/colorSurface"
+                app:layout_constraintTop_toBottomOf="@id/text_explore_subtitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <!-- Quote Header -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="KUTIPAN MOTIVASI HARI INI"
+                        android:textColor="?attr/colorPrimary"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.1" />
+
+                    <!-- Custom Large Quote Marks background or subtle formatting image could go here, 
+                         but let's focus on pure clean text styled beautifully -->
+                    <TextView
+                        android:id="@+id/text_quote"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="&quot;Perbuatan sukses bukanlah aksi sekali jadi, melainkan sebuah kebiasaan yang dipupuk berulang-ulang.&quot;"
+                        android:textColor="@color/on_color_container"
+                        android:textSize="18sp"
+                        android:textStyle="italic"
+                        android:lineSpacingMultiplier="1.2" />
+
+                    <TextView
+                        android:id="@+id/text_quote_author"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="12dp"
+                        android:text="— Aristoteles"
+                        android:textColor="@color/neutral_gray"
+                        android:textSize="13sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Section Header: Rekomendasi Pintar Harian -->
+            <TextView
+                android:id="@+id/text_section_recommendations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="REKOMENDASI PINTAR HARIAN"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.08"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/card_quote"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <!-- Dynamic Suggestion List RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_suggestions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintTop_toBottomOf="@id/text_section_recommendations"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Section Header: Komunitas Terupdate -->
+            <TextView
+                android:id="@+id/text_section_social"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AKTIVITAS KOMUNITAS"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.08"
+                android:layout_marginTop="28dp"
+                app:layout_constraintTop_toBottomOf="@id/recycler_suggestions"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/text_section_social_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aktivitas nyata &amp; inspirasi harian dari anggota tracker"
+                android:textColor="@color/neutral_gray"
+                android:textSize="11sp"
+                android:layout_marginTop="2dp"
+                app:layout_constraintTop_toBottomOf="@id/text_section_social"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <!-- Dynamic Bento Social Feed RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_social"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintTop_toBottomOf="@id/text_section_social_desc"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="32dp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Offline Alert State Overlay Container -->
+    <LinearLayout
+        android:id="@+id/layout_offline_warning"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?android:attr/windowBackground"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@android:drawable/ic_dialog_alert"
+            android:contentDescription="@string/conn_error_title"
+            android:tint="@color/priority_urgent"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/conn_error_title"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/conn_error_desc"
+            android:textColor="@color/neutral_gray"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:layout_marginBottom="24dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_retry_connection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/try_again"
+            app:cornerRadius="10dp" />
+    </LinearLayout>
+
+    <!-- FLOATING ACTION BUTTON FOR ADDING USER COMMUNITY ACTIVITIES -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="Bagikan Aktivitas Positif Anda"
+        android:src="@android:drawable/ic_menu_edit"
+        app:tint="@color/white"
+        app:backgroundTint="?attr/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="24dp"
+    app:cardCornerRadius="28dp"
+    app:cardElevation="8dp"
+    app:strokeWidth="1.5dp"
+    app:strokeColor="?attr/colorPrimary"
+    app:cardBackgroundColor="?attr/colorSurface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp">
+
+        <!-- Confetti/Celebration Emoji -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎉🏆🎉"
+            android:textSize="28sp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Congratulations Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pencapaian Baru Terbuka!"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:letterSpacing="0.02" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selamat! Kamu luar biasa hari ini."
+            android:textColor="@color/neutral_gray"
+            android:textSize="13sp"
+            android:layout_marginTop="4dp"
+            android:gravity="center" />
+
+        <!-- Bento-styled Spotlight Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/card_stroke_light"
+            app:cardBackgroundColor="@color/color_container">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="20dp">
+
+                <FrameLayout
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:background="@drawable/bg_badge_rounded"
+                    android:backgroundTint="?android:attr/windowBackground"
+                    android:padding="12dp"
+                    android:layout_marginBottom="12dp">
+
+                    <ImageView
+                        android:id="@+id/dialog_badge_icon"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_badge_step"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Unlocked Badge Icon" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/dialog_badge_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="First Step"
+                    android:textColor="@color/on_color_container"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/dialog_badge_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Berhasil membuat 1 target kebiasaan baru."
+                    android:textColor="@color/neutral_gray"
+                    android:textSize="13sp"
+                    android:gravity="center"
+                    android:layout_marginTop="6dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Acknowledgment/Action Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dialog_btn_claim"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Luar Biasa, Lanjutkan! 💪"
+            android:minHeight="48dp"
+            app:cornerRadius="14dp"
+            style="@style/Widget.Material3.Button" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Overrides for Dark Mode (Nocturnal Flow Dark Alignment) -->
+    <color name="color_container">#1F2633</color> <!-- Beautiful subtle charcoal blue container -->
+    <color name="on_color_container">#F5F5F5</color> <!-- Highly accessible soft white -->
+    <color name="circle_track">#12161F</color>
+    <color name="neutral_gray">#B0B3BC</color> <!-- Soft non-glaring high-contrast secondary text for dark mode -->
+    <color name="neutral_light_gray">#252D3A</color>
+    <color name="card_stroke_light">#2D3646</color>
+</resources>

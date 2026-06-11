@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/card_stroke_light"
+    app:cardBackgroundColor="?attr/colorSurface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="12dp">
+
+        <FrameLayout
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_badge_rounded"
+            android:backgroundTint="@color/color_container"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/image_badge_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitCenter"
+                android:contentDescription="Icon Badge" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/text_badge_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="First Step"
+            android:textColor="@color/on_color_container"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/text_badge_condition"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 Task Baru"
+            android:textColor="@color/neutral_gray"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:layout_marginTop="2dp" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

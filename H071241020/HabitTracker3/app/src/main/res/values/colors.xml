@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Light Mode Theme Colors (High-Contrast accessible Warm Cream / Peach Theme) -->
+    <color name="primary">#0E5D94</color>
+    <color name="primary_variant">#0B4771</color>
+    <color name="on_primary">#FFFFFF</color>
+    
+    <color name="background_light">#FFF9F2</color> <!-- Highly readable crisp pastel ivory warm background -->
+    <color name="surface_light">#FFFFFF</color>     <!-- Floating card surfaces -->
+    <color name="on_background_light">#121212</color> <!-- High-contrast text -->
+    <color name="on_surface_light">#121212</color>
+    
+    <!-- Dark Mode Theme Colors (Nocturnal Flow) -->
+    <color name="background_dark">#101418</color>  <!-- Cozy rich dark midnight background -->
+    <color name="surface_dark">#1B1F24</color>     <!-- Card surfaces in dark mode -->
+    <color name="on_background_dark">#F5F5F5</color> <!-- Soft non-glaring accessible white -->
+    <color name="on_surface_dark">#E0E0E0</color>    <!-- Accessible white text -->
+
+    <!-- Theme specific geometric tokens (Light Defaults) -->
+    <!-- Card Bento container background color & border color -->
+    <color name="color_container">#FFF0DF</color> <!-- Warm light accent container -->
+    <color name="on_color_container">#2B1B09</color> <!-- Dark text for bento labels -->
+    <color name="circle_track">#FFD8B3</color>
+    <color name="neutral_gray">#5F6368</color> <!-- Highly contrastive secondary gray text -->
+    <color name="neutral_light_gray">#F4EFEA</color> <!-- Neutral light backgrounds/badges -->
+    <color name="card_stroke_light">#E0D4C5</color> <!-- Distinct borders around cards -->
+    <color name="card_stroke_dark">#42474E</color>
+
+    <!-- Priority and Difficulty Level Badge Colors (Preserving contrast across states) -->
+    <color name="priority_urgent">#BA1A1A</color>
+    <color name="priority_high">#E06000</color>
+    <color name="priority_medium">#8F6C00</color>
+    <color name="priority_low">#006A60</color>
+    
+    <color name="difficulty_hard">#8F0099</color>
+    <color name="difficulty_medium">#0061A4</color>
+    <color name="difficulty_easy">#006A6A</color>
+
+    <!-- Essential utilities -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <color name="ripple_light">#1A0E5D94</color>
+    <color name="ripple_dark">#1AF5F5F5</color>
+</resources>

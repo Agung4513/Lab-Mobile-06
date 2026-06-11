@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_habit_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="6dp"
+    android:layout_marginVertical="8dp"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="0dp"
+    app:strokeWidth="1.5dp"
+    app:strokeColor="@color/card_stroke_light"
+    app:cardBackgroundColor="?attr/colorSurface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- Habit Title -->
+            <TextView
+                android:id="@+id/text_habit_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/btn_complete_action"
+                android:text="Olahraga Pagi"
+                android:textColor="@color/on_color_container"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:maxLines="1"/>
+
+            <!-- Optional Subtitle/Schedule -->
+            <TextView
+                android:id="@+id/text_habit_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text_habit_title"
+                android:layout_toStartOf="@id/btn_complete_action"
+                android:layout_marginTop="4dp"
+                android:text="Pukul 07:00 · Senin, Rabu, Jumat"
+                android:textColor="@color/neutral_gray"
+                android:textSize="12sp" />
+
+            <!-- Optimistic Check-In Action Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_complete_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="12dp"
+                android:text="@string/status_pending"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                android:minHeight="44dp"
+                style="@style/Widget.Material3.Button" />
+        </RelativeLayout>
+
+        <!-- Bento Badges Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_vertical">
+
+            <!-- Priority Badge -->
+            <TextView
+                android:id="@+id/text_priority_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_badge_rounded"
+                android:text="URGENT"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:layout_marginEnd="8dp"/>
+
+            <!-- Difficulty Badge -->
+            <TextView
+                android:id="@+id/text_difficulty_badge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_badge_rounded"
+                android:text="HARD"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="4dp"
+                android:layout_marginEnd="12dp"/>
+
+            <!-- Frequency Information -->
+            <TextView
+                android:id="@+id/text_frequency"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frekuensi: 3 hari/minggu"
+                android:textColor="@color/neutral_gray"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Habit Tracker Pro</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_stats">Stats</string>
+    <string name="nav_explore">Explore</string>
+    <string name="nav_profile">Profil</string>
+    
+    <!-- Habits Priorities -->
+    <string name="priority_title">Prioritas</string>
+    <string name="priority_urgent">Urgent</string>
+    <string name="priority_high">Tinggi</string>
+    <string name="priority_medium">Sedang</string>
+    <string name="priority_low">Rendah</string>
+    
+    <!-- Habits Difficulties -->
+    <string name="difficulty_title">Kesulitan</string>
+    <string name="difficulty_hard">Sulit</string>
+    <string name="difficulty_medium">Sedang</string>
+    <string name="difficulty_easy">Mudah</string>
+
+    <!-- General Labels and Hints -->
+    <string name="add_habit_title">Tambah Habit Baru</string>
+    <string name="edit_habit_title">Edit Habit</string>
+    <string name="title_hint">Nama Habit (misal: Olahraga Pagi)</string>
+    <string name="freq_prefix">Jumlah hari: </string>
+    <string name="save">Simpan</string>
+    <string name="cancel">Batal</string>
+    
+    <!-- Action messages -->
+    <string name="status_completed">Tuntas ✓</string>
+    <string name="status_pending">Selesai</string>
+    <string name="habit_deleted">Habit berhasil dihapus</string>
+    <string name="habit_saved">Habit berhasil disimpan</string>
+    <string name="empty_habits_title">Mulai Perjalananmu!</string>
+    <string name="empty_habits_desc">Belum ada habit untuk hari ini. Tambah habit baru menggunakan tombol "+" di kanan bawah.</string>
+    
+    <!-- Error & Connectivity -->
+    <string name="conn_error_title">Koneksi Terputus</string>
+    <string name="conn_error_desc">Gagal memuat data dari server. Periksa koneksi internet Anda.</string>
+    <string name="try_again">Coba Lagi</string>
+</resources>

@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Trophy / Master icon -->
+    <path
+        android:fillColor="#FFC107"
+        android:pathData="M19,5h-2V3H7v2H5C3.3,5,2,6.3,2,8c0,2.1,1.5,3.9,3.5,4.3C6.4,14.2,8.5,15,11,15v3H9v2h6v-2h-2v-3c2.5,0,4.6,-0.8,5.5,-2.7C20.5,11.9,22,10.1,22,8C22,6.3,20.7,5,19,5z M5,10.3C4.4,10,4,9.4,4,8c0,-0.6,0.4,-1,1,-1h2v4.2C6.1,11.1,5.4,10.8,5,10.3z M19,8c0,1.4,-0.4,2,-1,2.3c-0.4,0.5,-1.1,0.8,-2,0.9V7h2C18.6,7,19,7.4,19,8z" />
+    <path
+        android:fillColor="#FF8F00"
+        android:pathData="M12,2a10,10 0,0 1,1 0.05v12.9a10,10 0,0 1,-1 0.05z" />
+</vector>

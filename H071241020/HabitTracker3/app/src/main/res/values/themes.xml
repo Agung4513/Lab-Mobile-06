@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Application Theme (Light Mode - Accessible Warm Cream / Peach Theme) -->
+    <style name="Theme.HabitTracker" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Main Brand Colors -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+
+        <!-- Status Bar Configuration -->
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:windowLightStatusBar">true</item>
+
+        <!-- Semantic Theme Color Attributes -->
+        <item name="android:windowBackground">@color/background_light</item>
+        <item name="colorSurface">@color/surface_light</item>
+        <item name="colorOnBackground">@color/on_background_light</item>
+        <item name="colorOnSurface">@color/on_surface_light</item>
+
+        <!-- Accessibility Compliant Standard Typography Colors Mapping -->
+        <item name="android:textColorPrimary">@color/on_background_light</item>
+        <item name="android:textColorSecondary">@color/neutral_gray</item>
+        <item name="android:textColorTertiary">@color/neutral_gray</item>
+    </style>
+</resources>
